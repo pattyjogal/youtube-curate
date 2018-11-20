@@ -22,11 +22,11 @@ Now, get the database up and running. You will need to have postgresql installed
 Start off by creating the database and user to go along with is. The database name by default is `curate`, and the role name is `db_admin`. You can change this in the `settings.py`. Run these commands to get the database up as well as the user.
 
 ```
-sudo -u postgres createuser curate
+sudo -u postgres createdb curate
 ```
 
 ```
-sudo -u postgres createdb db_admin
+sudo -u postgres createuser db_admin
 ```
 
 ### Running the server
