@@ -16,13 +16,7 @@ Including another URLconf
 from django.contrib.auth.models import User
 from django.urls import include, path
 from rest_framework import routers, serializers, viewsets
-
-
-# Serializers define the API representation.
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ('url', 'username', 'email', 'is_staff')
+from api.curator.serializers import UserSerializer
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
