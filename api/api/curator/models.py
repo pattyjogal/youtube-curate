@@ -11,4 +11,4 @@ class Video(models.Model):
     url = models.URLField()
 
     def add_rating(self, user, rating):
-        VideoRating.objects.create(user=user, rating=rating, video=self.pk)
+        return VideoRating.objects.create(user=user, rating=rating, video=self.pk)
